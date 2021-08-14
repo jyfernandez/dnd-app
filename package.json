@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.2.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -11,7 +12,11 @@
     "@types/react": "^17.0.17",
     "@types/react-dom": "^17.0.9",
     "antd": "^4.16.11",
+    "craco": "^0.0.3",
+    "craco-antd": "^1.19.0",
+    "craco-less": "^1.18.0",
     "react": "^17.0.2",
+    "react-app-rewired": "^2.1.8",
     "react-dnd": "^14.0.3",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -19,9 +24,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "INLINE_RUNTIME_CHUNK=false GENERATE_SOURCEMAP=false craco build",
+    "test": "craco test --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
