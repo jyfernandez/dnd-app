@@ -31,11 +31,23 @@ function App() {
                   return <SortableTable />;
                 }}
               />
+              <Route
+                exact
+                path="/"
+                render={() => {
+                  return <h1>Hello</h1>;
+                }}
+              />
+              <Route
+                path="*"
+                render={() => {
+                  return <h1>Hi</h1>;
+                }}
+              />
             </Switch>
           </div>
         </React.Suspense>
       </BrowserRouter>
-      <SortableTable />
     </div>
   );
 }
