@@ -33,6 +33,13 @@ function App() {
               />
               <Route
                 exact
+                path="/sortable-images"
+                render={() => {
+                  return <h1>Sample Image</h1>;
+                }}
+              />
+              <Route
+                exact
                 path="/"
                 render={() => {
                   return <h1>Hello</h1>;
