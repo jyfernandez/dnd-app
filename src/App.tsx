@@ -3,6 +3,7 @@ import SortableTable from "./components/SortableTable";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import "antd/dist/antd.css";
+import { Menu } from "./components/Menu";
 function App() {
   return (
     <div className="app">
@@ -42,7 +43,7 @@ function App() {
                 exact
                 path="/"
                 render={() => {
-                  return <h1>Hello</h1>;
+                  return <Menu />;
                 }}
               />
               <Route
